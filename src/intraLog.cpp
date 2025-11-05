@@ -120,7 +120,7 @@ namespace {
 	int DrawWrappedLine(intraFont* font,
 						const char* text,
 						float x,
-						float y,
+						float& y,
 						float maxWidth,
 						float scale,
 						float baseDy)
@@ -232,7 +232,7 @@ void Log_DrawOverlay(float x, float y, int maxLines, float scale)
 	intraFontSetStyle(s_font, scale, 0xFFFFFFFF, 0x00000000, 0.0f, 0);
 
 	int rowsBudget = (maxLines > 0) ? maxLines : s_count * 2;
-	const float baseDy = 12.0f * (scale / 0.7f);
+	const float baseDy = 16.0f * (scale / 0.7f);
 	const float maxWidth = std::max(0.0f, kScreenW - x - 4.0f);
 
 	int start = (s_head - s_count + LOG_MAX_LINES) * LOG_MAX_LINES;

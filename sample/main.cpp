@@ -78,7 +78,8 @@ int main(void)
 		testLog();
 
 		Log_DrawFPSOverlay(8.0f, 20.0f, 1.0f);
-		Log_DrawOverlay(8.0f, 40.0f, 1.0f);
+		Log_DrawOverlay(8.0f, 40.0f, 20, 0.7f);
+		Log_Clear();
 
 		
 
