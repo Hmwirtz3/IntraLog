@@ -42,7 +42,7 @@ int main(void)
 
 	setup_callbacks();
 	sceGuInit();
-	Log_Init(); // Init Logging 
+	
 	sceGuStart(GU_DIRECT, list);
 	
 	sceGuDrawBuffer(GU_PSM_8888, (void*)0, 512);
@@ -68,8 +68,10 @@ int main(void)
 	{
 		sceGuStart(GU_DIRECT, list);
 
-		sceGuClearColor(0xFF003366);
+		sceGuClearColor(0x00000000);
 		sceGuClear(GU_COLOR_BUFFER_BIT);
+
+		Log_Init();
 		
 		if (g_fps.tick())
 		{Log_UpdateFPS(g_fps.fps);}
