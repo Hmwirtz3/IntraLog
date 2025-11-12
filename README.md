@@ -7,8 +7,8 @@ IntraLog is a tiny wrapper for intraFont, that aids in logging for real hardware
 
 Features:
 Drop in logging for C++ projects that supports printf stylle arguments.
-Word wrapped overlay
-FPS overlay
+Word wrapped overlay.
+FPS overlay.
 Easy stubbing to compile out Logs per file (#include "intraLogNULL.h" instead of #include "intraLog.h")
 
 Requirements:
